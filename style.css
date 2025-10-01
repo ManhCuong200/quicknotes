@@ -508,23 +508,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Tablet styles */
-@media (max-width: 1024px) {
-  .container {
-    padding: 24px;
-  }
-
-  .user__card {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .user__card__content {
-    width: 100%;
-  }
-}
-
-/* Mobile styles */
 @media (max-width: 768px) {
   .container {
     padding: 16px;
@@ -645,7 +628,6 @@ body {
   .emty__state__btn:hover {
     background-color: #4f46e5;
   }
-
 
   .quick__wrapper {
     padding: 16px;
