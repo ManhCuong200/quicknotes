@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper" id="quick__wrapper">
+        <div class="container">
+            <header class="header">
+                <h1 class="header__title">Quick Notes</h1>
+                <div class="btn">
+                    <button class="btn__add" id="btn__add">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                        </svg>
+                        Add Note
+                    </button>
+                    <button class="btn__darkMode" id="btn__darkMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div id="user__card__container"></div>
+                <div class="emty__state" id="emty__state">
+                    <h2 class="emty__state__title">No notes yet</h2>
+                    <p class="emty__state__text">Create your first note to get started! </p>
+                    <button class="emty__state__btn" id="emty__state__btn">+ Add Your First Note</button>
+                </div>
+            </main>
+            <div class="quick__wrapper">
+                <dialog class="quick__modal" id="quick__modal">
+                    <div class="quick__title">
+                        <h2 class="quick__title__text">Add New Note</h2>
+                        <button class="quick__title__btn" id="quick__title__btn">
+                            <span class="btn__close">×</span>
+                        </button>
+                    </div>
+                    <form id="quick__form">
+                        <div class="quick__group">
+                            <label for="title" class="quick__group__label">Title</label>
+                            <input type="text" class="quick__group__input" placeholder="Enter note title..."
+                                id="quick__group__input" required value>
+                        </div>
+                        <div class="quick__group">
+                            <label for="title" class="quick__group__label">Content</label>
+                            <textarea class="quick__group__textarea" placeholder="Write your note here..."
+                                id="quick__group__textarea" required></textarea>
+                        </div>
+                        <div class="quick__group__btn">
+                            <button type="button" class="quick__group__btn__cancel"
+                                id="quick__group__btn__cancel">Cancel</button>
+                            <button type="submit" class="quick__group__btn__save" id="quick__group__btn__save">Save
+                                Note</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
