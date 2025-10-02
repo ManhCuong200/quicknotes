@@ -66,15 +66,15 @@ quickForm.addEventListener("submit", function (e) {
     // tìm người dùng theo id
     const note = notesForm.find((item) => item.id === isEdit);
     // update người dùng
-    note.title = quickTitle.value;
-    note.content = quickTextarea.value;
+    note.title = quickTitle.value.trim();
+    note.content = quickTextarea.value.trim();
     // reset id
     isEdit = null;
   } else {
     //lấy giá trị của title
-    const titleValue = quickTitle.value;
+    const titleValue = quickTitle.value.trim();
     // lấy giá trị của content
-    const contentValue = quickTextarea.value;
+    const contentValue = quickTextarea.value.trim();
     //tạo object
     const note = {
       id: Date.now(),
@@ -131,8 +131,8 @@ function renderNotesForm() {
 function editNote(id) {
   const note = notesForm.find((item) => item.id === id);
   isEdit = id;
-  quickTitle.value = note.title;
-  quickTextarea.value = note.content;
+  quickTitle.value = note.title.trim();
+  quickTextarea.value = note.content.trim();
   document.querySelector(".quick__title__text").textContent = "Edit Note";
   quickModal.showModal();
 }
